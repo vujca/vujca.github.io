@@ -1,0 +1,166 @@
+<html>
+    <head>
+        <!-- Information about web site -->
+        <title>Shoutcast installation file</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="https://tomeksdev.com/design/images/favicon-32x32.png" sizes="32x32" />
+        <meta name="author" content="Tomo Novak">
+        <meta name="description" content="Develop web, mobile applications with html, css, javascript, nodejs, raspberry... System Administraton(Linux, Windows...), Networking...">
+        <meta name="keywords" content="nodejs, javascript, jquery, html, css, tomeksdev, developer, development, developing, raspberry, pi">
+        <!-- Facebook Meta -->
+        <meta property="og:url" content="https://tomeksdev.com">
+        <meta property="og:title" content="TomeksDEV">
+        <meta property="og:description" content="Develop web, mobile applications with html, css, javascript, nodejs, raspberry... System Administraton(Linux, Windows...), Networking...">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://tomeksdev.com/design/images/tomeksdev.png">
+        <meta property="og:image:secure_url" content="https://tomeksdev.com/design/images/tomeksdev.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="900">
+        <!-- LOADING CSS FILES -->
+        <link rel="stylesheet" href="/design/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="/design/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/design/font-awesome/css/fontawesome.min.css">
+        <link rel="stylesheet" href="/design/font-awesome/css/brands.min.css">
+        <link rel="stylesheet" href="/design/font-awesome/css/solid.min.css">
+        <!-- LOADING JS FILES -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149612850-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-149612850-1');
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid padding">
+            <!--Header-->
+            <div class="row padding header">
+                <!-- Navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light shadow-sm" id="mainNav">
+                    <div class="container">
+                        <div class="navbar-brand fw-bold">
+                            <div class="logo-text">
+                                <span class="logo-normaltext">Tomeks</span>
+                                <span class="logo-smalltext">DEV</span>
+                            </div>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars fa-2x" style="color: #ffffff;"></i>
+                        </button>
+                        <!--<div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                                <a class="navlink" href=""><li class="nav-item active">Home</li></a>
+                                <a class="navlink" href="/downloads"><li class="nav-item">Downloads</li></a>
+                                <a class="navlink" href="/about"><li class="nav-item">About Me</li></a>
+                                <a class="navlink" href="/contact"><li class="nav-item">Contact</li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>-->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+        <a class="navlink" href="/"><li class="nav-item">Home</li></a>
+        <a class="navlink" href="/downloads"><li class="nav-item">Downloads</li></a>
+        <a class="navlink" href="/about"><li class="nav-item">About Me</li></a>
+        <a class="navlink" href="/contact"><li class="nav-item">Contact</li></a>
+    </ul>
+</div>
+</div>
+</nav>
+</div>
+<!-- Full Post Here -->
+<div class="row padding fullPost">
+    <div class="col-lg padding">
+        <div class="col-lg padding">
+            <div class="row padding">
+                <div class="col col-lg-2 gradientLeft"></div>
+                <div class="col col-lg-8 homeFullPost">
+                    <div class="homeFullPostTitle">Shoutcast installation file</div>
+                    <div class="homeFullPostDate">June  9, 2019</div>
+                    <div class="homeFullPostText"><p><img src="https://tomeksdev.com/postImages/Shoutcast_1.png" alt="Alt" title="Shoutcast" /></p>
+
+<p>For private and business purposes, I made the installation script for the shoutcast server 64-bit. The script installs the latest version of the shoutcast server that is released, and includes a <strong><em>DDNAS</em></strong> certificate for the installation so that the server supports v1 and v2 shoutcasts. Also, the script performs and creates an automatic startup of the shoutcast server when booting the system up and has a simple command for easier shoutcast server control.</p>
+
+<p>Installation is done in just three simple commands.</p>
+
+<p>You will need to download the installation file from the page <a href="https://tomeksdev.com/tools/linux/shoutcast-inst.tar.gz">TomeksDEV</a> and unzip the same file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz
+tar xfz shoutcast-inst.tar.gz
+sudo ./shoutcast-inst
+</code></pre></div></div>
+
+<p>When installing, you will be asked to enter 4 passwords (adminpassword, password, streamadminpassword_1, streampassword_1) and IPs that will be stored in the sc_serv.conf file that will serve us for the Shoutcast server.</p>
+
+<p>NOTE: The <strong><em>adminpassword</em></strong> and <strong><em>password</em></strong> can not be the same, and it’s best to have <strong><em>streamadminpassword</em></strong> and <strong><em>streampassword</em></strong> different from each other.</p>
+
+<p>Test:</p>
+
+<ul>
+  <li>
+    <p>Ubuntu 18.04 LTS - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Ubuntu 18.04 Desktop - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Ubuntu 16.04 LTS - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Ubuntu 16.04 Desktop - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Debian 8 Jessie - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Debian 9 Stretch - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+  <li>
+    <p>Debian 10 Buster - <code class="language-plaintext highlighter-rouge">WORKING</code></p>
+  </li>
+</ul>
+
+<p>Command usage:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>shoutcast { start | stop | restart }
+</code></pre></div></div>
+</div>
+                </div>
+                <div class="col col-lg-2 gradientRight"></div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!--Footer-->
+            <div class="row padding">
+                <div class="col-lg footer padding">
+                    <div class="row padding center justify-content-md-center">
+                        <div class="col col-lg-8 footer">
+                            <p>2020 - 2023 &copy; <a href="">TomeksDEV</a>, by <a href="https://www.facebook.com/vujca">@Vujca</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="/js/vendor/popper.min.js"></script>
+        <script src="/design/dist/js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="/js/ie10-viewport-bug-workaround.js"></script>
+        <!-- McCaffe Security -->
+        <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+    </body>
+</html>

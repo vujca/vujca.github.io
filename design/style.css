@@ -177,11 +177,6 @@ nav li {
     margin-left: -3px;
 }
 
-/*.navlink {
-    padding: 20px;
-    margin-left: -3px;
-}*/
-
 nav li:hover {
     background-color: #d80000;
     border-bottom: 1px solid #d80000;
@@ -485,6 +480,7 @@ nav .active {
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
 }
+  
 
 .aboutPage img{
   width: 100% !important;
@@ -504,7 +500,8 @@ nav .active {
 
 .aboutPage .aboutText p:last-of-type {
   text-align: center !important;
-}
+}  
+
 
 .aboutPage .aboutSite a:hover{
   text-decoration: underline;
@@ -544,6 +541,18 @@ nav .active {
 
   .home-small-img {
     height: 122px !important; 
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav li {
+    margin-left: 0 !important;
+  }
+
+  .me-4 {
+    margin-right: 0 !important;
   }
 
   .postDateHomeBig {

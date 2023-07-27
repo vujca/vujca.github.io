@@ -54,17 +54,6 @@
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                             <i class="fa fa-bars fa-2x" style="color: #ffffff;"></i>
                         </button>
-                        <!--<div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                                <a class="navlink" href=""><li class="nav-item active">Home</li></a>
-                                <a class="navlink" href="/downloads"><li class="nav-item">Downloads</li></a>
-                                <a class="navlink" href="/about"><li class="nav-item">About Me</li></a>
-                                <a class="navlink" href="/contact"><li class="nav-item">Contact</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>-->
             <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
         <a class="navlink" href="/"><li class="nav-item">Home</li></a>
@@ -84,7 +73,7 @@
                 <div class="col col-lg-2 gradientLeft"></div>
                 <div class="col col-lg-8 homeFullPost">
                     <div class="homeFullPostTitle">Prepare proxmox for SAS storage</div>
-                    <div class="homeFullPostDate">July 25, 2022</div>
+                    <div class="homeFullPostDate">July 25, 2022 by Vujca</div>
                     <div class="homeFullPostText"><p>We are looking and investigating the connection between proxmox and SAS storage. In our case we are using two HPE DL380 Gen10 servers and one MSA 2060 SAS LFF storage. During our investigation and research, we came across the Multipath configuration that needs to be configured on Linux machines in order for the SAS to work normally and without any issues. Therefore, we made an effort to configure Multipath and successfully make all luns visible and add them to our nodes. Below is an explanation of how we got this solution to work.</p>
 
 <p><img src="https://tomeksdev.com/new/postImages/proxmox_sas_small.svg" alt="Alt" title="Proxmox" /></p>

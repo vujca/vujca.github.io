@@ -15,9 +15,12 @@ Installation is done in just three simple commands.
 
 You will need to download the installation file from the page [TomeksDEV](https://tomeksdev.com/tools/linux/shoutcast-inst.tar.gz) and unzip the same file.
 
-    wget https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz
-    tar xfz shoutcast-inst.tar.gz
-    sudo ./shoutcast-inst
+{% include codeHeader.html %}
+```
+wget https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz
+tar xfz shoutcast-inst.tar.gz
+sudo ./shoutcast-inst
+```
 
 When installing, you will be asked to enter 4 passwords (adminpassword, password, streamadminpassword_1, streampassword_1) and IPs that will be stored in the sc_serv.conf file that will serve us for the Shoutcast server.
 

@@ -24,6 +24,7 @@ I was write little script for installation of Wireguard server with GUI. Bellow 
 
 Download script to your server
 
+{% include codeHeader.html %}
 ```
 wget https://github.com/tomeksdev/wireguard-install-with-gui/releases/download/v1.0.0/wg-server-install.tar.gz
 ```
@@ -34,9 +35,12 @@ This script automatically install wireguard and all needed dependencies for wire
 
 You need to make this script executable and than run script with following commands:
 
-    tar -xzvf wg-server-install.tar.gz
-    chmod +x wireguard-server-inst.sh
-    ./wireguard-server-inst.sh
+{% include codeHeader.html %}
+```
+tar -xzvf wg-server-install.tar.gz
+chmod +x wireguard-server-inst.sh
+./wireguard-server-inst.sh
+```
 
 #### Step 3:
 

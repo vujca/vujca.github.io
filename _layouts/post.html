@@ -24,23 +24,21 @@ layout: page
                     <div class="homeFullPostText">
                         {{ content }}
 
-                        {% if page.content contains "pre" %}
+                        {% if page.content contains "code" %}
                         <script>
                             // get all <code> elements
-                            var allPreBlocksElements = $( "pre" );
                             var allCodeBlocksElements = $( "code" );
-                            allPreBlocksElements.each(function(i) {
-                                allCodeBlocksElements.each(function(i) {
-                                    // add different id for each code block
 
-                                    // target	
-                                var currentId = "codeblock" + (i + 1);
-                                $(this).attr('id', currentId);
-                                    
-                                //trigger
-                                var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
-                                    $(this).after(clipButton);
-                                });
+                            allCodeBlocksElements.each(function(i) {
+                                // add different id for each code block
+
+                                // target	
+                            var currentId = "codeblock" + (i + 1);
+                            $(this).attr('id', currentId);
+                                
+                            //trigger
+                            var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
+                                $(this).after(clipButton);
                             });
                             
                             new Clipboard('.copy-text');

@@ -24,4 +24,12 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
   });
 });*/
 
-// get all <code> elements
+let copyText = document.querySelector(".highlighter-rouge");
+copyText.querySelector("button").addEventListener("click", function () {
+	document.execCommand("copy");
+	copyText.classList.add("active");
+	window.getSelection().removeAllRanges();
+	setTimeout(function () {
+		copyText.classList.remove("active");
+	}, 2500);
+});

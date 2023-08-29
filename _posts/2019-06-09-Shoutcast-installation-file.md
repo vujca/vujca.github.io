@@ -15,7 +15,6 @@ Installation is done in just three simple commands.
 
 You will need to download the installation file from the page [TomeksDEV](https://tomeksdev.com/tools/linux/shoutcast-inst.tar.gz) and unzip the same file.
 
-{% include codeHeader.html %}
 ```
 wget https://github.com/tomeksdev/tomeksdev.github.io/raw/master/tools/linux/shoutcast-inst.tar.gz
 tar xfz shoutcast-inst.tar.gz

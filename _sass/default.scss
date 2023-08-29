@@ -48,6 +48,13 @@ body{
   display: none;
 }
 
-.copy-code-button {
-  display: block;
+.copy-code-button button {
+	padding: 10px;
+	background: #5784f5;
+	color: #fff;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
 }

@@ -7,7 +7,7 @@ imageSmall: shoutcast.png
 keywords: shoutcast, radio, stream, server, installation, script, bash, ubuntu, debian, linux, DDNAS, v1, v2, stream, password
 ---
 
-![Alt](https://tomeksdev.com/postImages/Shoutcast_1.png "Shoutcast")
+![Alt]({{ baseurl }}/postImages/Shoutcast_1.png "Shoutcast")
 
 For private and business purposes, I made the installation script for the shoutcast server 64-bit. The script installs the latest version of the shoutcast server that is released, and includes a **_DDNAS_** certificate for the installation so that the server supports v1 and v2 shoutcasts. Also, the script performs and creates an automatic startup of the shoutcast server when booting the system up and has a simple command for easier shoutcast server control.
 

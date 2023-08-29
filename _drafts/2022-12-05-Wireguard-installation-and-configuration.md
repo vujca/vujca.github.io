@@ -8,7 +8,7 @@ keywords: linux, ubuntu, debian, wireguard, vpn, connection, security, protocol,
 ---
 For my purposes, I needed a VPN connection to connect all my sites and also my notebook to access them all. I use wireguard VPN for this solution because it is secure and uses modern cryptography for the connections. I have connected my location in Croatia (Home Lab) where I have several servers, network devices and virtualization for my purposes of testing and using it for backups of all cell phones and all PCs we have at home. Also my location in Germany, where I live and work, and also my servers, which are located in Germany in one of the data centers of the provider Contabo.
 
-![Alt](https://vujca.github.io/postImages/wireguard.png "Wireguard")
+![Alt]({{ baseurl }}/postImages/wireguard.png "Wireguard")
 
 ### Why I use wireguard?
 ----------------------------------------------
@@ -24,7 +24,6 @@ I was write little script for installation of Wireguard server with GUI. Bellow 
 
 Download script to your server
 
-{% include codeHeader.html %}
 ```wget https://github.com/tomeksdev/wireguard-install-with-gui/releases/download/v1.0.0/wg-server-install.tar.gz
 ```
 
@@ -34,7 +33,6 @@ This script automatically install wireguard and all needed dependencies for wire
 
 You need to make this script executable and than run script with following commands:
 
-{% include codeHeader.html %}
 ```
 tar -xzvf wg-server-install.tar.gz
 chmod +x wireguard-server-inst.sh

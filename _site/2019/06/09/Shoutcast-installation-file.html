@@ -38,6 +38,10 @@
 <link rel="stylesheet" href="/assets/font-awesome/css/brands.min.css">
 <link rel="stylesheet" href="/assets/font-awesome/css/solid.min.css">
 
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-149612850-1"></script>
 <script>
@@ -87,7 +91,7 @@
                     <div class="homeFullPostTitle">Shoutcast installation file</div>
                     <div class="homeFullPostDate">June  9, 2019 by Vujca</div>
                     <div class="homeFullPostText">
-                        <p><img src="https://tomeksdev.com/postImages/Shoutcast_1.png" alt="Alt" title="Shoutcast" /></p>
+                        <p><img src="/postImages/Shoutcast_1.png" alt="Alt" title="Shoutcast" /></p>
 
 <p>For private and business purposes, I made the installation script for the shoutcast server 64-bit. The script installs the latest version of the shoutcast server that is released, and includes a <strong><em>DDNAS</em></strong> certificate for the installation so that the server supports v1 and v2 shoutcasts. Also, the script performs and creates an automatic startup of the shoutcast server when booting the system up and has a simple command for easier shoutcast server control.</p>
 
@@ -139,7 +143,7 @@ sudo ./shoutcast-inst
                         
                         <script>
                             // get all <code> elements
-                            var allCodeBlocksElements = $( "code" );
+                            var allCodeBlocksElements = $( "pre code" );
 
                             allCodeBlocksElements.each(function(i) {
                                 // add different id for each code block
@@ -180,7 +184,6 @@ sudo ./shoutcast-inst
             <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="/assets/js/vendor/popper.min.js"></script>
@@ -189,6 +192,5 @@ sudo ./shoutcast-inst
 <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
 <!-- McCaffe Security -->
 <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
     </body>
 </html>

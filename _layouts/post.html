@@ -27,7 +27,7 @@ layout: page
                         {% if page.content contains "code" %}
                         <script>
                             // get all <code> elements
-                            var allCodeBlocksElements = $( "code" );
+                            var allCodeBlocksElements = $( "pre code" );
 
                             allCodeBlocksElements.each(function(i) {
                                 // add different id for each code block

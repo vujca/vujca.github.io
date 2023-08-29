@@ -8,7 +8,7 @@ keywords: SSH, bash, script, linux, server, desktop, ubuntu, debian, key
 ---
 For personal use, and all, I've created this script to make my job sometimes easy. I have multiple servers and i didnt want to write every time same command for every server, and because of that, i created this script. All my project's are on my GitHub account and here is link where you can look for this repository: [SSH-KEY-SERVER-ADD](https://github.com/tomeksdev/ssh-key-server-add).
 
-![Alt](https://tomeksdev.com/new/postImages/ssh_script.png "SSH Script")
+![Alt]({{ baseurl }}/postImages/ssh_script.png "SSH Script")
 
 Script that adds multiple SSH keys to multiple servers.
 

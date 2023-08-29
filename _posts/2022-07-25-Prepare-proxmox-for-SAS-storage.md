@@ -13,14 +13,12 @@ We are looking and investigating the connection between proxmox and SAS storage.
 
 If the node has a SAS controller that is external and connected to external storage (e.g. MSA 1060 SAS), we first need to change some lines in the iscsid.conf file.
 
-{% include codeHeader.html %}
 ```
 nano /etc/iscsi/iscsid.conf
 ```
 
 Search for two lines and change like its writen bellow.
 
-{% include codeHeader.html %}
 ```
 node.startup = automatic
 node.session.timeo.replacement_timeout = 15
@@ -28,14 +26,12 @@ node.session.timeo.replacement_timeout = 15
 
 After changing the iscsid.conf file, we must update the system (if necessary, also install ``apt upgrade``), for this solution to work, and install new service called multipath.
 
-{% include codeHeader.html %}
 ```
 apt-get update -y && apt-get install -y multipath-tools
 ```
 
 When service is installed we must get WWID from disk drives what was showed with lsblk command and what was linux node readerd from storage node.
 
-{% include codeHeader.html %}
 ```
 lsblk
 ```
@@ -44,7 +40,6 @@ Input looks like that before storage is coonected, and after looks something lik
 
 To see and know WWID from drive wich must be in multipath, we use command bellow but always change 'X' variable to name what we see on lsblk.
 
-{% include codeHeader.html %}
 ```
 /lib/udev/scsi_id -g -u -d /dev/sdX
 ```
@@ -55,14 +50,12 @@ Copy this WWID to some text editor that you have always by yourselfs because we 
 
 Now, when we have WWID we can create multipath.conf file and make configuration for all disk drives wich are goes to same multipath.
 
-{% include codeHeader.html %}
 ```
 nano /etc/multipath.conf
 ```
 
 Copy/paste this config and only put your WWID. If you need more, just add more same lines like in config.
 
-{% include codeHeader.html %}
 ```
 blacklist {
         wwid .*
@@ -97,21 +90,18 @@ defaults {
 
 Now we are finis with config file of multipath and must only add to multipath to recognize all with command bellow(repeat this how much diffirent WWID'S you have).
 
-{% include codeHeader.html %}
 ```
 multipath -a WWID
 ```
 
 After you make all we need to restart multipath service.
 
-{% include codeHeader.html %}
 ```
 systemctl restart multipath-tools.service
 ```
 
 You can check all multipath devices with command bellow.
 
-{% include codeHeader.html %}
 ```
 multipath -ll
 ```
@@ -120,7 +110,6 @@ multipath -ll
 
 After all configuration run command bellow in order.
 
-{% include codeHeader.html %}
 ```
 multipath -v3
 multipath -v2 -d
@@ -130,7 +119,6 @@ init 6
 
 The problem in the Proxmox node is that they usually can't see this drive and for this reason we need to manually create a volume group and an LVM group for each drive on the WWID after which we will be able to create virtual machine storage in the Proxmox GUI. The variable X is a recommended number here and you can use a value of 0 and higher for each WWID.
 
-{% include codeHeader.html %}
 ```
 pvcreate /dev/mapper/mpathX
 vgcreate qdisk-vg /dev/mapper/mpathX

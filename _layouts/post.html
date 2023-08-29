@@ -24,23 +24,23 @@ layout: page
                     <div class="homeFullPostText">
                         {{ content }}
 
-                        {% if page.content contains "code" %}
-                        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                        <script src="https://cdn.jsdelivr.net/npm/clipboard@1/dist/clipboard.min.js"></script>
+                        {% if page.content contains "pre" %}
                         <script>
                             // get all <code> elements
+                            var allPreBlocksElements = $( "pre" );
                             var allCodeBlocksElements = $( "code" );
+                            allPreBlocksElements.each(function(i) {
+                                allCodeBlocksElements.each(function(i) {
+                                    // add different id for each code block
 
-                            allCodeBlocksElements.each(function(i) {
-                                // add different id for each code block
-
-                                // target	
-                            var currentId = "codeblock" + (i + 1);
-                            $(this).attr('id', currentId);
-                                
-                            //trigger
-                            var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
-                                $(this).after(clipButton);
+                                    // target	
+                                var currentId = "codeblock" + (i + 1);
+                                $(this).attr('id', currentId);
+                                    
+                                //trigger
+                                var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
+                                    $(this).after(clipButton);
+                                });
                             });
                             
                             new Clipboard('.copy-text');

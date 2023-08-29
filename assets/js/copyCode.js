@@ -24,7 +24,7 @@ copyCodeButtons.forEach((copyCodeButton, index) => {
   });
 });*/
 
-let copyText = document.querySelector(".highlighter-rouge");
+/*let copyText = document.querySelector(".highlighter-rouge");
 copyText.querySelector("button").addEventListener("click", function () {
 	document.execCommand("copy");
 	copyText.classList.add("active");
@@ -32,4 +32,4 @@ copyText.querySelector("button").addEventListener("click", function () {
 	setTimeout(function () {
 		copyText.classList.remove("active");
 	}, 2500);
-});
+});*/

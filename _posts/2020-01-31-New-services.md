@@ -4,6 +4,7 @@ title: New Services
 description: TomeksDEV lunches new hosting services for all of You
 imageBig: plesk.svg
 imageSmall: plesk_small.svg
+keywords: plesk, web, hosting, webhosting, site, website, server, domain, mail, webmail, email
 ---
 
 We are monitoring the development of web hosting and Internet services, so we decided to launch a new service. We are always the first to introduce new technologies, new domains, we are maximally responsible and correct to our clients, we are a partner you can trust.

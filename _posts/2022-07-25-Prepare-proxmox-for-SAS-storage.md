@@ -4,6 +4,7 @@ title: Prepare proxmox for SAS storage
 description: We investigate and prepare proxmox with SAS storage and multipath
 imageBig: proxmox_sas.svg
 imageSmall: proxmox_sas_small.svg
+keywords: proxmox, server, linux, debian, multipath, multipathd, sas, storage, wwwid, iscsi, HPE, DL380, Gen10, LFF, SFF
 ---
 
 We are looking and investigating the connection between proxmox and SAS storage. In our case we are using two HPE DL380 Gen10 servers and one MSA 2060 SAS LFF storage. During our investigation and research, we came across the Multipath configuration that needs to be configured on Linux machines in order for the SAS to work normally and without any issues. Therefore, we made an effort to configure Multipath and successfully make all luns visible and add them to our nodes. Below is an explanation of how we got this solution to work. 

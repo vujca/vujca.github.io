@@ -4,6 +4,7 @@ title: Shoutcast installation file
 description: Small script to install shoutcast server with all commands in few lines
 imageBig: shoutcast.svg
 imageSmall: shoutcast.svg
+keywords: shoutcast, radio, stream, server, installation, script, bash, ubuntu, debian, linux, DDNAS, v1, v2, stream, password
 ---
 
 ![Alt](https://tomeksdev.com/postImages/Shoutcast_1.png "Shoutcast")

@@ -21,7 +21,29 @@ layout: page
                 <div class="col col-lg-8 homeFullPost">
                     <div class="homeFullPostTitle">{{ page.title }}</div>
                     <div class="homeFullPostDate">{{ page.date | date: "%B %e, %Y" }} by Vujca</div>
-                    <div class="homeFullPostText">{{ content }}</div>
+                    <div class="homeFullPostText">
+                        {{ content }}
+
+                        {% if page.content contains "code" %}
+                        <script>
+                            var allCodeBlocksElements = $( "code" );
+
+                            allCodeBlocksElements.each(function(i) {
+                                // add different id for each code block
+
+                                // target	
+                            var currentId = "codeblock" + (i + 1);
+                            $(this).attr('id', currentId);
+                                
+                            //trigger
+                            var clipButton = '<button class="copy-text" data-clipboard-target="#' + currentId + '"><i class="fa fa-clone"></i></button>';
+                                $(this).after(clipButton);
+                            });
+                            
+                            new Clipboard('.copy-text');
+                        </script>
+                        {% endif %}
+                    </div>
                 </div>
                 <div class="col col-lg-2 gradientRight"></div>
             </div>

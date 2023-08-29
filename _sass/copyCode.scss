@@ -1,19 +1,4 @@
 .copy-text {
-	position: relative;
-	padding: 10px;
-	background: #fff;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	display: flex;
-}
-.copy-text .text {
-	padding: 10px;
-	font-size: 18px;
-	color: #555;
-	border: none;
-	outline: none;
-}
-.copy-text button {
 	padding: 10px;
 	background: #5784f5;
 	color: #fff;
@@ -24,10 +9,10 @@
 	cursor: pointer;
 }
 
-.copy-text button:active {
+.copy-text:active {
 	background: #809ce2;
 }
-.copy-text button:before {
+.copy-text:before {
 	content: "Copied";
 	position: absolute;
 	top: -45px;
@@ -38,7 +23,7 @@
 	font-size: 15px;
 	display: none;
 }
-.copy-text button:after {
+.copy-text:after {
 	content: "";
 	position: absolute;
 	top: -20px;
@@ -49,7 +34,7 @@
 	transform: rotate(45deg);
 	display: none;
 }
-.copy-text.active button:before,
-.copy-text.active button:after {
+.copy-text.active:before,
+.copy-text.active:after {
 	display: block;
 }

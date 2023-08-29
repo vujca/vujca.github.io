@@ -2,8 +2,8 @@
 layout: post
 title: New Services
 description: TomeksDEV lunches new hosting services for all of You
-imageBig: plesk.svg
-imageSmall: plesk_small.svg
+imageBig: plesk.png
+imageSmall: plesk_small.png
 keywords: plesk, web, hosting, webhosting, site, website, server, domain, mail, webmail, email
 ---
 

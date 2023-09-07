@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Information about web site -->
 
@@ -15,8 +16,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
 
-<!-- Facebook Meta -->
-<meta property="og:url" content="">
+<!-- Facebook -->
+
+  <meta property="og:url" content="http://localhost:4000/">
+
 
 <meta property="og:title" content="TomeksDEV &mdash; TomeksDEV">
 
@@ -28,6 +31,15 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- LOADING CSS FILES -->
 <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
@@ -97,7 +109,7 @@
             <div class="col-sm-6 padding">
                 
                 <a class="mask-overlay linkBigHome" href="/2022/09/06/Script-for-insert-multiple-ssh-keys-on-multiple-servers">
-                    <img class="home-big-image bigHome" style="width: 100% !important;" src="/postImages/ssh_script.png"/>
+                    <img class="home-big-image bigHome" style="width: 100% !important;" src="/postImages/ssh_script.png" alt="" />
                     <div class="postHome postHomeBig">
                         <div class="postDateHomeBig">6 September 2022</div>
                         <div class="postTitleHomeBig">Linux script for inserting SSH keys</div>
@@ -111,7 +123,7 @@
                     
                     <div class=".col-6 .col-sm-6 home-small-img padding">
                         <a class="mask-overlay linkSmallHome-1" href="/2022/07/25/Prepare-proxmox-for-SAS-storage">
-                            <img class="home-small-image smallHome-1" style="width: 100% !important;" src="/postImages/proxmox_sas_small.png"/>
+                            <img class="home-small-image smallHome-1" style="width: 100% !important;" src="/postImages/proxmox_sas_small.png" alt="" />
                             <div class="postHome postHomeSmall-1">
                                 <div class="postDateHomeBig">25 July 2022</div>
                                 <div class="postTitleHomeSmall">Prepare proxmox for SAS storage</div>
@@ -123,7 +135,7 @@
                     
                     <div class=".col-6 .col-sm-6 home-small-img padding">
                         <a class="mask-overlay linkSmallHome-1" href="/2020/01/31/New-services">
-                            <img class="home-small-image smallHome-1" style="width: 100% !important;" src="/postImages/plesk_small.png"/>
+                            <img class="home-small-image smallHome-1" style="width: 100% !important;" src="/postImages/plesk_small.png" alt="" />
                             <div class="postHome postHomeSmall-1">
                                 <div class="postDateHomeBig">31 January 2020</div>
                                 <div class="postTitleHomeSmall">New Services</div>
@@ -146,7 +158,7 @@
 			    <div class="col">
                     <div class="card text-bg-secondary">
                         <a href="/2019/06/09/Shoutcast-installation-file">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="/postImages/shoutcast.png" />
+                        <img class="bd-placeholder-img card-img-top" width="100%" height="140" focusable="false" src="/postImages/shoutcast.png" alt="" />
                         <div class="card-body">
                             <h5 class="card-title">Shoutcast installation file</a><p class="card-date">9 June 2019</p></h5>
                             <p class="card-text">Small script to install shoutcast server with all commands in few lines</p>
@@ -175,8 +187,6 @@
             <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="/assets/js/vendor/popper.min.js"></script>
 <script src="/assets/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

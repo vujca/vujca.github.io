@@ -2,14 +2,15 @@
 layout: post
 title: Prepare proxmox for SAS storage
 description: We investigate and prepare proxmox with SAS storage and multipath
+imgAlt: Proxmox
 imageBig: proxmox_sas.png
 imageSmall: proxmox_sas_small.png
-keywords: proxmox, server, linux, debian, multipath, multipathd, sas, storage, wwwid, iscsi, HPE, DL380, Gen10, LFF, SFF
+keywords: proxmox, proxmox SAS, SAS, Prepare proxmox, SAS storage, storage, SAS storage TomeksDEV, Multipath, WWID, configure Multipath, configure Mutipath, multipath wwid
 ---
 
 We are looking and investigating the connection between proxmox and SAS storage. In our case we are using two HPE DL380 Gen10 servers and one MSA 2060 SAS LFF storage. During our investigation and research, we came across the Multipath configuration that needs to be configured on Linux machines in order for the SAS to work normally and without any issues. Therefore, we made an effort to configure Multipath and successfully make all luns visible and add them to our nodes. Below is an explanation of how we got this solution to work. 
 
-![Alt]({{ baseurl }}/postImages/proxmox_sas_small.png "Proxmox")
+*![Alt]({{ baseurl }}/postImages/proxmox_sas_small.png "Proxmox")*
 
 If the node has a SAS controller that is external and connected to external storage (e.g. MSA 1060 SAS), we first need to change some lines in the iscsid.conf file.
 
@@ -17,7 +18,7 @@ If the node has a SAS controller that is external and connected to external stor
 nano /etc/iscsi/iscsid.conf
 ```
 
-Search for two lines and change like its writen bellow.
+Search for two lines and change like its written bellow.
 
 ```
 node.startup = automatic
@@ -38,17 +39,17 @@ lsblk
 
 Input looks like that before storage is coonected, and after looks something like that, depends on how many luns we created on storage.
 
-To see and know WWID from drive wich must be in multipath, we use command bellow but always change 'X' variable to name what we see on lsblk.
+To see and know WWID from drive which must be in multipath, we use command bellow but always change 'X' variable to name what we see on lsblk.
 
 ```
 /lib/udev/scsi_id -g -u -d /dev/sdX
 ```
 
-![Alt](https://tomeksdev.com/new/postImages/proxmox_wwid.png "Proxmox")
+*![Alt](https://tomeksdev.com/new/postImages/proxmox_wwid.png "Proxmox")*
 
 Copy this WWID to some text editor that you have always by yourselfs because we needed this id to configure multipath.conf file.
 
-Now, when we have WWID we can create multipath.conf file and make configuration for all disk drives wich are goes to same multipath.
+Now, when we have WWID we can create multipath.conf file and make configuration for all disk drives which are goes to same multipath.
 
 ```
 nano /etc/multipath.conf
@@ -106,7 +107,7 @@ You can check all multipath devices with command bellow.
 multipath -ll
 ```
 
-![Alt](https://tomeksdev.com/new/postImages/proxmox_multipath.png "Proxmox")
+*![Alt](https://tomeksdev.com/new/postImages/proxmox_multipath.png "Proxmox")*
 
 After all configuration run command bellow in order.
 

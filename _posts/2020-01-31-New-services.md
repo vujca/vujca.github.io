@@ -2,6 +2,7 @@
 layout: post
 title: New Services
 description: TomeksDEV lunches new hosting services for all of You
+imgAlt: Plesk
 imageBig: plesk.png
 imageSmall: plesk_small.png
 keywords: plesk, web, hosting, webhosting, site, website, server, domain, mail, webmail, email
@@ -11,7 +12,7 @@ We are monitoring the development of web hosting and Internet services, so we de
 We uncompromisingly choose the best for our partners.
 Our servers are co-located at **_Contabo's_** best-in-class datacenter, ensuring premium bandwidth and fastest access (lowest ping! higgest performance!).
 
-![Alt]({{ baseurl }}/postImages/plesk.jpg "Plesk")
+*![Alt]({{ baseurl }}/postImages/plesk.jpg "Plesk")*
 
 Our servers are based on linux OS ([Ubuntu](https://ubuntu.com/)) with the latest plesk panel ([Obsidian](https://www.plesk.com/)), with mandatory constant updating and maintenance of the service available to you for 0-24 hours.
 

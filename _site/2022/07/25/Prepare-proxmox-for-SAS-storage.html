@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Information about web site -->
 
@@ -9,14 +10,16 @@
 <meta name="description" content="We investigate and prepare proxmox with SAS storage and multipath" />
 
 
-<meta name="keywords" content="proxmox, server, linux, debian, multipath, multipathd, sas, storage, wwwid, iscsi, HPE, DL380, Gen10, LFF, SFF" />
+<meta name="keywords" content="proxmox, proxmox SAS, SAS, Prepare proxmox, SAS storage, storage, SAS storage TomeksDEV, Multipath, WWID, configure Multipath, configure Mutipath, multipath wwid" />
 <meta name="author" content="Tomo Novak (aka Vujca)" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
 
-<!-- Facebook Meta -->
-<meta property="og:url" content="">
+<!-- Facebook -->
+
+  <meta property="og:url" content="http://localhost:4000/2022/07/25/Prepare-proxmox-for-SAS-storage">
+
 
 <meta property="og:title" content="Prepare proxmox for SAS storage &mdash; TomeksDEV">
 
@@ -28,6 +31,15 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- LOADING CSS FILES -->
 <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
@@ -97,19 +109,24 @@
             <div class="row padding">
                 <div class="col col-lg-2 gradientLeft"></div>
                 <div class="col col-lg-8 homeFullPost">
-                    <div class="homeFullPostTitle">Prepare proxmox for SAS storage</div>
-                    <div class="homeFullPostDate">July 25, 2022 by Vujca</div>
+                    <h1 class="homeFullPostTitle">Prepare proxmox for SAS storage</h1>
+                    <h5 class="homeFullPostDate">
+                        July 25, 2022 by Vujca
+                        
+                        <div class="fb-share-button" data-href="http://localhost:4000/2022/07/25/Prepare-proxmox-for-SAS-storage" data-layout="button_count"></div>
+                        
+                    </h5>
                     <div class="homeFullPostText">
                         <p>We are looking and investigating the connection between proxmox and SAS storage. In our case we are using two HPE DL380 Gen10 servers and one MSA 2060 SAS LFF storage. During our investigation and research, we came across the Multipath configuration that needs to be configured on Linux machines in order for the SAS to work normally and without any issues. Therefore, we made an effort to configure Multipath and successfully make all luns visible and add them to our nodes. Below is an explanation of how we got this solution to work.</p>
 
-<p><img src="/postImages/proxmox_sas_small.png" alt="Alt" title="Proxmox" /></p>
+<p><em><img src="/postImages/proxmox_sas_small.png" alt="Alt" title="Proxmox" /></em></p>
 
 <p>If the node has a SAS controller that is external and connected to external storage (e.g. MSA 1060 SAS), we first need to change some lines in the iscsid.conf file.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/iscsi/iscsid.conf
 </code></pre></div></div>
 
-<p>Search for two lines and change like its writen bellow.</p>
+<p>Search for two lines and change like its written bellow.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node.startup = automatic
 node.session.timeo.replacement_timeout = 15
@@ -127,16 +144,16 @@ node.session.timeo.replacement_timeout = 15
 
 <p>Input looks like that before storage is coonected, and after looks something like that, depends on how many luns we created on storage.</p>
 
-<p>To see and know WWID from drive wich must be in multipath, we use command bellow but always change ‘X’ variable to name what we see on lsblk.</p>
+<p>To see and know WWID from drive which must be in multipath, we use command bellow but always change ‘X’ variable to name what we see on lsblk.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/lib/udev/scsi_id -g -u -d /dev/sdX
 </code></pre></div></div>
 
-<p><img src="https://tomeksdev.com/new/postImages/proxmox_wwid.png" alt="Alt" title="Proxmox" /></p>
+<p><em><img src="https://tomeksdev.com/new/postImages/proxmox_wwid.png" alt="Alt" title="Proxmox" /></em></p>
 
 <p>Copy this WWID to some text editor that you have always by yourselfs because we needed this id to configure multipath.conf file.</p>
 
-<p>Now, when we have WWID we can create multipath.conf file and make configuration for all disk drives wich are goes to same multipath.</p>
+<p>Now, when we have WWID we can create multipath.conf file and make configuration for all disk drives which are goes to same multipath.</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano /etc/multipath.conf
 </code></pre></div></div>
@@ -189,7 +206,7 @@ defaults {
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>multipath -ll
 </code></pre></div></div>
 
-<p><img src="https://tomeksdev.com/new/postImages/proxmox_multipath.png" alt="Alt" title="Proxmox" /></p>
+<p><em><img src="https://tomeksdev.com/new/postImages/proxmox_multipath.png" alt="Alt" title="Proxmox" /></em></p>
 
 <p>After all configuration run command bellow in order.</p>
 
@@ -252,8 +269,6 @@ vgcreate qdisk-vg /dev/mapper/mpathX
             <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="/assets/js/vendor/popper.min.js"></script>
 <script src="/assets/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

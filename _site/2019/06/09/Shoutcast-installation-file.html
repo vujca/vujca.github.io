@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Information about web site -->
 
@@ -15,8 +16,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32" />
 
-<!-- Facebook Meta -->
-<meta property="og:url" content="">
+<!-- Facebook -->
+
+  <meta property="og:url" content="http://localhost:4000/2019/06/09/Shoutcast-installation-file">
+
 
 <meta property="og:title" content="Shoutcast installation file &mdash; TomeksDEV">
 
@@ -28,6 +31,15 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- LOADING CSS FILES -->
 <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
@@ -97,10 +109,15 @@
             <div class="row padding">
                 <div class="col col-lg-2 gradientLeft"></div>
                 <div class="col col-lg-8 homeFullPost">
-                    <div class="homeFullPostTitle">Shoutcast installation file</div>
-                    <div class="homeFullPostDate">June  9, 2019 by Vujca</div>
+                    <h1 class="homeFullPostTitle">Shoutcast installation file</h1>
+                    <h5 class="homeFullPostDate">
+                        June  9, 2019 by Vujca
+                        
+                        <div class="fb-share-button" data-href="http://localhost:4000/2019/06/09/Shoutcast-installation-file" data-layout="button_count"></div>
+                        
+                    </h5>
                     <div class="homeFullPostText">
-                        <p><img src="/postImages/Shoutcast_1.png" alt="Alt" title="Shoutcast" /></p>
+                        <p><em><img src="/postImages/Shoutcast_1.png" alt="Alt" title="Shoutcast" /></em></p>
 
 <p>For private and business purposes, I made the installation script for the shoutcast server 64-bit. The script installs the latest version of the shoutcast server that is released, and includes a <strong><em>DDNAS</em></strong> certificate for the installation so that the server supports v1 and v2 shoutcasts. Also, the script performs and creates an automatic startup of the shoutcast server when booting the system up and has a simple command for easier shoutcast server control.</p>
 
@@ -193,8 +210,6 @@ sudo ./shoutcast-inst
             <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
 <script src="/assets/js/vendor/popper.min.js"></script>
 <script src="/assets/dist/js/bootstrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -19,8 +19,13 @@ layout: page
             <div class="row padding">
                 <div class="col col-lg-2 gradientLeft"></div>
                 <div class="col col-lg-8 homeFullPost">
-                    <div class="homeFullPostTitle">{{ page.title }}</div>
-                    <div class="homeFullPostDate">{{ page.date | date: "%B %e, %Y" }} by Vujca</div>
+                    <h1 class="homeFullPostTitle">{{ page.title }}</h1>
+                    <h5 class="homeFullPostDate">
+                        {{ page.date | date: "%B %e, %Y" }} by Vujca
+                        {% if page.url %}
+                        <div class="fb-share-button" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count"></div>
+                        {% endif %}
+                    </h5>
                     <div class="homeFullPostText">
                         {{ content }}
 

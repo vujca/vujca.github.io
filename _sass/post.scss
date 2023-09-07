@@ -8,10 +8,23 @@
   .homeFullPost a {
     color: #772953 !important;
   }
-  
-  .homeFullPost img {
+
+  .homeFullPostText em img {
     width: 100% !important;
     height: auto;
+  }
+  
+  .homeFullPost strong img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  .homeFullPost img .centered{
+    display: block;
+    max-width: 100% !important;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .homeFullPost ul li code{

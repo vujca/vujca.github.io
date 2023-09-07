@@ -19,8 +19,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon-32x32.png" sizes="32x32" />
 
-<!-- Facebook Meta -->
-<meta property="og:url" content="{{ site.baseurl }}">
+<!-- Facebook -->
+{% if page.url %}
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+{% endif %}
 {% if page.title %}
 <meta property="og:title" content="{{ page.title }} &mdash; {{ site.title }}">
 {% else %}
@@ -36,6 +38,15 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="900">
+<div id="fb-root"></div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- LOADING CSS FILES -->
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/bootstrap.min.css">

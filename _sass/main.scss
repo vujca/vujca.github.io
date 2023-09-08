@@ -16,7 +16,7 @@
   .mask-overlay {
     position: relative;
     display: inline-block;
-    //overflow:hidden;
+    overflow: clip;
     -webkit-transition: all 1s ease-out;
     -moz-transition: all 1s ease-out;
     -o-transition: all 1s ease-out;
@@ -27,7 +27,7 @@
   .mask-overlay img {
     width: 100% !important;
     transition: transform 1s ease-in-out;
-    transform-origin: 50% 50%
+    transform-origin: 50% 50%;
   }
   
   .mask-overlay:hover img {

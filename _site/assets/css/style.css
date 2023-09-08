@@ -208,6 +208,7 @@ nav .active {
 .mask-overlay {
   position: relative;
   display: inline-block;
+  overflow: clip;
   -webkit-transition: all 1s ease-out;
   -moz-transition: all 1s ease-out;
   -o-transition: all 1s ease-out;
